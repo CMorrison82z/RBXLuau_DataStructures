@@ -7,6 +7,16 @@ local Module = {}
 export type Map = {any : boolean}
 export type Array = {any}
 
+Module.MapToArray = function(map : Map)
+	local a = {}
+
+	for k in map do
+		table.insert(a, k)
+	end
+	
+	return a
+end
+
 Module.ArrayToMap = function(array : Array)
 	local map : Map = {}
 
